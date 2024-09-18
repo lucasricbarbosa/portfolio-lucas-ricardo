@@ -1,9 +1,9 @@
-import { Download, Home } from 'lucide-react'
+import { Home } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import profilePicture from '../../assets/profile-picture.png'
+import { DowloadCVButton } from '../dowloadCVButton'
 import { ConfigurationMenu } from '../themes/configurationMenu'
-import { Button } from '../ui/button'
 import { NavigationMenuAboutMe } from './navigationMenuAboutMe'
 import { NavigationMenuLink } from './navigationMenuLink'
 import { NavigationMenuMySocials } from './navigationMySocials'
@@ -37,9 +37,7 @@ export function NavigationMenu() {
           <NavigationMenuMySocials />
         </ul>
         <div className="flex items-center gap-3 border-t p-3">
-          <Button className="w-full bg-primary text-sm font-medium text-white">
-            Baixar meu currículo <Download className="ml-2 size-4" />
-          </Button>
+          <DowloadCVButton />
           <ConfigurationMenu />
         </div>
       </div>
