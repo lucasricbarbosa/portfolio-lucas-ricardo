@@ -15,7 +15,7 @@ export function NavigationMenuAboutMe() {
         }
       />
       <NavigationMenuLink
-        to="/"
+        to="/pt-BR/sobre-mim"
         navigationTitle="Sobre mim"
         navigationIcon={
           <BookOpenText className="size-4 transition-all duration-300 group-hover:text-primary" />

@@ -2,15 +2,22 @@ import { ChevronRight } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
+import { BuildTogether } from '@/components/buildTogether'
 import { CardInfo } from '@/components/cards/cardInfo'
 import { DowloadCVButton } from '@/components/dowloadCVButton'
 import { HomeHeaderProfile } from '@/components/home/homeHeaderProfile'
+import { Projects } from '@/components/home/projects'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-import blLogo from '../../assets/bl-logo.png'
-import etecLogo from '../../assets/etec-logo.png'
-import fsaLogo from '../../assets/fsa-logo.png'
-import rocketseatLogo from '../../assets/rocketseat-logo.png'
+import blLogo from '../../../assets/bl-logo.png'
+import etecLogo from '../../../assets/etec-logo.png'
+import frontEndLogo from '../../../assets/front-end-development-logo.svg'
+import fsaLogo from '../../../assets/fsa-logo.png'
+import googleLogo from '../../../assets/google-logo.svg'
+import reactLogo from '../../../assets/react-logo.svg'
+import rocketseatLogo from '../../../assets/rocketseat-logo.png'
+import uxUiLogo from '../../../assets/ux-ui-logo.svg'
+import webDevelopmentLogo from '../../../assets/web-development-logo.svg'
 
 export function Home() {
   return (
@@ -38,6 +45,8 @@ export function Home() {
           </span>
         </CardContent>
       </Card>
+
+      {/* Experiências e Educação -=-=-=-==-==-==-==-=-=- */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
@@ -92,6 +101,60 @@ export function Home() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Projetos -=-=-=-==-==-==-==-=-=- */}
+      <Projects />
+
+      {/* Áreas de expertise e Aprendendo -=-=-=-==-==-==-==-=-=- */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <CardTitle>Áreas de expertise</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-start justify-between gap-3">
+            <CardInfo
+              cardInfoTitle="Desenvolvimento Front-End"
+              cardInfoSubtitle="NextJS, Typescript, React e muito mais"
+              cardInfoAlt="Ícone de um link em um computador"
+              cardInfoImage={frontEndLogo}
+            />
+            <CardInfo
+              cardInfoTitle="Desenvolvimento Web"
+              cardInfoSubtitle="Node, Design, SQL e muito mais"
+              cardInfoAlt="Ícone de um layput"
+              cardInfoImage={webDevelopmentLogo}
+            />
+            <CardInfo
+              cardInfoTitle="UX/UI Designer"
+              cardInfoSubtitle="Figma e Photoshop"
+              cardInfoAlt="Ícone de um xadrez"
+              cardInfoImage={uxUiLogo}
+            />
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <CardTitle>Aprendendo</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col justify-between gap-3">
+            <CardInfo
+              cardInfoTitle="Melhoria em performance"
+              cardInfoSubtitle="React"
+              cardInfoAlt="Logotipo React"
+              cardInfoImage={reactLogo}
+            />
+            <CardInfo
+              cardInfoTitle="Implementação em nuvem"
+              cardInfoSubtitle="Google"
+              cardInfoAlt="Logotipo do Google"
+              cardInfoImage={googleLogo}
+            />
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Construir algo juntos -=-=-=-==-==-==-==-=-=- */}
+      <BuildTogether />
     </>
   )
 }

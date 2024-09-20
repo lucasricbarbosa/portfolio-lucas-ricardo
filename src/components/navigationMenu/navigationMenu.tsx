@@ -12,7 +12,7 @@ export function NavigationMenu() {
   return (
     <aside className="fixed top-0 z-50 w-full border-b border-r md:h-[100dvh] md:w-72 md:border-b-0">
       <div className="flex h-full w-full flex-col overflow-hidden bg-background transition-all duration-300">
-        <Link to="/" className="flex items-center border-b p-3">
+        <Link to="/pt-BR" className="flex items-center border-b p-3">
           <img className="size-9" src={profilePicture} alt="" />
           <div className="ml-2">
             <h4 className="text-sm font-medium text-foreground">
@@ -26,7 +26,7 @@ export function NavigationMenu() {
         <ul className="h-full p-3">
           <li>
             <NavigationMenuLink
-              to="/"
+              to="/pt-BR"
               navigationTitle="Início"
               navigationIcon={
                 <Home className="size-4 transition-all duration-300 group-hover:text-primary" />
