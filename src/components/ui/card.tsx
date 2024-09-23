@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import * as React from 'react'
 
 import { cn } from '@/lib/utils'
@@ -6,14 +7,29 @@ const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      'rounded-lg border bg-card text-card-foreground shadow-sm',
-      className,
-    )}
-    {...props}
-  />
+  <motion.div
+    initial={{
+      opacity: 0,
+      x: -40,
+    }}
+    whileInView={{
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+      },
+    }}
+    viewport={{ once: true }}
+  >
+    <div
+      ref={ref}
+      className={cn(
+        'rounded-lg border bg-card text-card-foreground shadow-sm',
+        className,
+      )}
+      {...props}
+    />
+  </motion.div>
 ))
 Card.displayName = 'Card'
 

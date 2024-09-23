@@ -4,6 +4,7 @@ import { AppLayout } from './pages/_layouts/app'
 import { AuthLayout } from './pages/_layouts/auth'
 import { AboutMe } from './pages/app/pt-BR/aboutMe'
 import { Home } from './pages/app/pt-BR/home'
+import { SearchTest } from './pages/app/pt-BR/searchTest'
 import { SignIn } from './pages/auth/sign-in'
 
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     children: [
       { path: '/pt-BR', element: <Home /> },
       { path: '/pt-BR/sobre-mim', element: <AboutMe /> },
+      { path: '/pt-BR/teste', element: <SearchTest /> },
     ],
   },
   {

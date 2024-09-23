@@ -21,7 +21,11 @@ export function ConfigurationMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="group min-w-10" variant="ghost" size="icon">
+        <Button
+          className="group min-w-10 border md:border-none"
+          variant="ghost"
+          size="icon"
+        >
           <Settings className="size-5 duration-150 group-hover:rotate-90" />
           <span className="sr-only">Opções de visualização</span>
         </Button>

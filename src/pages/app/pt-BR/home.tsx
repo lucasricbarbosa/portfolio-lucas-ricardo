@@ -22,7 +22,7 @@ import webDevelopmentLogo from '../../../assets/web-development-logo.svg'
 export function Home() {
   return (
     <>
-      <Helmet title="Teste" />
+      <Helmet title="Home" />
       <HomeHeaderProfile />
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
@@ -36,7 +36,7 @@ export function Home() {
         </CardHeader>
         <CardContent>
           <span className="text-muted-foreground">
-            Hello, my name is Erick Nathan, I am a dedicated front-end
+            Hello, my name is Lucas Ricardo, I am a dedicated front-end
             developer, with extensive experience in technologies such as NodeJS
             and ReactJS, and a track record with notable clients such as Uber
             Chip, Correios Celular and Carrefour at Pagtel, specializing in
@@ -132,7 +132,7 @@ export function Home() {
             />
           </CardContent>
         </Card>
-        <Card>
+        <Card className="h-full">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>Aprendendo</CardTitle>
           </CardHeader>
