@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import profilePicture from '../../assets/profile-picture.png'
 import { Badge } from '../ui/badge'
 
@@ -5,19 +7,73 @@ export function HomeHeaderProfile() {
   return (
     <div>
       <section className="flex items-center gap-5">
-        <img
+        <motion.img
+          initial={{
+            opacity: 0,
+            x: -40,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: true }}
           className="size-24"
           src={profilePicture}
           alt="Foto de perfil do Lucas Ricardo"
         />
         <div className="">
-          <span className="text-2xl font-semibold text-foreground sm:text-3xl">
+          <motion.span
+            initial={{
+              opacity: 0,
+              y: -40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.6,
+              },
+            }}
+            viewport={{ once: true }}
+            className="block text-2xl font-semibold text-foreground sm:text-3xl"
+          >
             Lucas Ricardo
-          </span>
-          <p className="text-sm text-muted-foreground sm:text-base">
+          </motion.span>
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.6,
+              },
+            }}
+            viewport={{ once: true }}
+            className="text-sm text-muted-foreground sm:text-base"
+          >
             Desenvolvedor Front-End
-          </p>
-          <div className="hidden flex-wrap items-center gap-1 pt-2 min-[420px]:flex">
+          </motion.p>
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -40,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 0.6,
+              },
+            }}
+            viewport={{ once: true }}
+            className="hidden flex-wrap items-center gap-1 pt-2 min-[420px]:flex"
+          >
             <Badge className="bg-muted font-normal text-foreground">
               ReactJS
             </Badge>
@@ -33,7 +89,7 @@ export function HomeHeaderProfile() {
             <Badge className="bg-muted font-normal text-foreground">
               UX/UI Design
             </Badge>
-          </div>
+          </motion.div>
         </div>
       </section>
       <div className="flex flex-wrap items-center gap-1 pt-3 min-[420px]:hidden">

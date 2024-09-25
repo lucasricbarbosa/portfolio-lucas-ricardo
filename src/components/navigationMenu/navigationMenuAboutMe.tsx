@@ -22,7 +22,7 @@ export function NavigationMenuAboutMe() {
         }
       />
       <NavigationMenuLink
-        to="/"
+        to="/pt-BR/tecnologias"
         navigationTitle="Tecnologias"
         navigationIcon={
           <Layers className="size-4 transition-all duration-300 group-hover:text-primary" />

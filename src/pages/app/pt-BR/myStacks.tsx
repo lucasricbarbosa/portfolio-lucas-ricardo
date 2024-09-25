@@ -82,7 +82,7 @@ const projectsList: StacksListProps = {
   ],
 }
 
-export function SearchTest() {
+export function MyStacks() {
   const [frontendStacks, setFrontendStacks] = useState<StacksProps[]>([])
   const [backendStacks, setBackendStacks] = useState<StacksProps[]>([])
   const [search, setSearch] = useState('')
