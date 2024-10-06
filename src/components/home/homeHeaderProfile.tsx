@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion'
 
+import { homeHeaderBadges } from '@/utils/homeHeaderBadges'
+
 import profilePicture from '../../assets/profile-picture.png'
 import { Badge } from '../ui/badge'
+
+interface HomeHeaderProfileProps {
+  badge: string
+}
 
 export function HomeHeaderProfile() {
   return (
@@ -74,21 +80,30 @@ export function HomeHeaderProfile() {
             viewport={{ once: true }}
             className="hidden flex-wrap items-center gap-1 pt-2 min-[420px]:flex"
           >
-            <Badge className="bg-muted font-normal text-foreground">
-              ReactJS
-            </Badge>
-            <Badge className="bg-muted font-normal text-foreground">
-              NextJS
-            </Badge>
-            <Badge className="bg-muted font-normal text-foreground">
-              Typescript
-            </Badge>
-            <Badge className="bg-muted font-normal text-foreground">
-              Javascript
-            </Badge>
-            <Badge className="bg-muted font-normal text-foreground">
-              UX/UI Design
-            </Badge>
+            {homeHeaderBadges.map((badge: HomeHeaderProfileProps, index) => {
+              return (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    x: -40,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      duration: 1,
+                      delay: 0.1 * index,
+                    },
+                  }}
+                  viewport={{ once: true }}
+                  key={(badge.badge, index)}
+                >
+                  <Badge className="bg-muted text-foreground">
+                    {badge.badge}
+                  </Badge>
+                </motion.div>
+              )
+            })}
           </motion.div>
         </div>
       </section>

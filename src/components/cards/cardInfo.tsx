@@ -1,9 +1,12 @@
+import { motion } from 'framer-motion'
+
 interface CardInfoProps {
   cardInfoTitle: string
   cardInfoSubtitle: string
   cardInfoThirdText?: string
   cardInfoImage: string
   cardInfoAlt: string
+  delay?: number
 }
 
 export function CardInfo({
@@ -12,9 +15,26 @@ export function CardInfo({
   cardInfoTitle,
   cardInfoImage,
   cardInfoAlt,
+  delay,
 }: CardInfoProps) {
   return (
-    <div className="flex items-center gap-2">
+    <motion.div
+      initial={{
+        opacity: 0,
+        // x: index % 2 === 0 ? -80 : 40, // Aplica animação apenas nos itens pares
+        x: -80,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+          delay,
+        },
+      }}
+      viewport={{ once: true }}
+      className="flex items-center gap-2"
+    >
       <img
         className="size-12 rounded border"
         src={cardInfoImage}
@@ -27,6 +47,6 @@ export function CardInfo({
         <p className="text-xs text-muted-foreground">{cardInfoSubtitle}</p>
         <p className="text-xs text-muted-foreground">{cardInfoThirdText}</p>
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -1,13 +1,32 @@
+import { motion } from 'framer-motion'
+
 import { Button } from '../ui/button'
 
 interface stackItemProps {
   name: string
   image: string
+  delay: number
 }
 
-export function StackItem({ image, name }: stackItemProps) {
+export function StackItem({ image, name, delay }: stackItemProps) {
   return (
-    <li className="flex w-full items-center text-sm font-semibold">
+    <motion.li
+      initial={{
+        opacity: 0,
+        // x: index % 2 === 0 ? -80 : 40, // Aplica animação apenas nos itens pares
+        x: -80,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+          delay,
+        },
+      }}
+      viewport={{ once: true }}
+      className="flex w-full items-center text-sm font-semibold"
+    >
       <Button
         variant={'secondary'}
         className="h-full w-full justify-start bg-muted"
@@ -26,6 +45,6 @@ export function StackItem({ image, name }: stackItemProps) {
         </div>{' '}
         <span>{name}</span>
       </Button>
-    </li>
+    </motion.li>
   )
 }

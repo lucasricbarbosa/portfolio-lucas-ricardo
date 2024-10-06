@@ -140,6 +140,7 @@ export function MyStacks() {
                 image={project.image}
                 name={project.name}
                 key={(project.name, index)}
+                delay={0.07 * index}
               />
             ))}
           </ul>
@@ -157,6 +158,7 @@ export function MyStacks() {
                 image={project.image}
                 name={project.name}
                 key={(project.name, index)}
+                delay={0.07 * index}
               />
             ))}
           </ul>

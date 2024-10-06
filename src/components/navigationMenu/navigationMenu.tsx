@@ -21,7 +21,11 @@ export function NavigationMenu() {
     <aside className="fixed top-0 z-50 w-full border-b border-r md:h-[100dvh] md:w-72 md:border-b-0">
       <div className="flex h-full w-full flex-col overflow-hidden bg-background transition-all duration-300">
         <header className="flex items-center justify-between border-b p-3 px-8 md:px-3">
-          <Link to="/pt-BR" className="flex items-center max-[390px]:hidden">
+          <Link
+            onClick={toggleSidebar}
+            to="/pt-BR"
+            className="flex items-center max-[390px]:hidden"
+          >
             <img className="size-9" src={profilePicture} alt="" />
             <div className="ml-2">
               <h4 className="text-sm font-medium text-foreground">
@@ -52,6 +56,7 @@ export function NavigationMenu() {
           <ul className="h-full p-3">
             <li>
               <NavigationMenuLink
+                onClick={toggleSidebar}
                 to="/pt-BR"
                 navigationTitle="Início"
                 navigationIcon={
@@ -59,7 +64,7 @@ export function NavigationMenu() {
                 }
               />
             </li>
-            <NavigationMenuAboutMe />
+            <NavigationMenuAboutMe onLinkClick={toggleSidebar} />
             <NavigationMenuMySocials />
           </ul>
           <div className="flex items-center gap-3 border-t p-3">
