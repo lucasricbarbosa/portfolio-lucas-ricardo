@@ -4,83 +4,7 @@ import { useEffect, useState } from 'react'
 import { PageTitle } from '@/components/pageTitle'
 import { SectionTitle } from '@/components/sectionTitle'
 import { StackItem } from '@/components/stackPage/stackItem'
-
-interface StacksProps {
-  name: string
-  image: string
-}
-
-interface StacksListProps {
-  frontend: StacksProps[]
-  backend: StacksProps[]
-}
-
-const projectsList: StacksListProps = {
-  frontend: [
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'React',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'Vue.js',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'Angular',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-  ],
-  backend: [
-    {
-      name: 'Node.js',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'Express.js',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-    {
-      name: 'Django',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
-    },
-  ],
-}
+import { stacksList, StacksProps } from '@/utils/stacks'
 
 export function MyStacks() {
   const [frontendStacks, setFrontendStacks] = useState<StacksProps[]>([])
@@ -90,8 +14,8 @@ export function MyStacks() {
   console.log('renderizou')
 
   useEffect(() => {
-    setFrontendStacks(projectsList.frontend)
-    setBackendStacks(projectsList.backend)
+    setFrontendStacks(stacksList.frontend)
+    setBackendStacks(stacksList.backend)
   }, [])
 
   const filteredFrontendStacks = search.length

@@ -3,8 +3,8 @@ import { Linkedin } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
-import profilePicture from '@/assets/big-profile-picture.png'
 import graduationImg from '@/assets/graduation-img.png'
+import profilePicture from '@/assets/profile-picture-2.jpg'
 import { ListItem } from '@/components/aboutMePage/listItem'
 import { SpotifyMusicPlayer } from '@/components/aboutMePage/spotifyMusicPlayer'
 import { BuildTogether } from '@/components/buildTogether'
@@ -34,7 +34,7 @@ export function AboutMe() {
         className="grid grid-cols-1 gap-5 lg:grid-cols-[3fr_6fr] lg:gap-8"
       >
         <img
-          className="h-full w-full max-w-80 rounded object-cover min-[400px]:min-w-80"
+          className="h-[360px] w-full max-w-80 rounded object-cover min-[400px]:min-w-80"
           src={profilePicture}
           alt=""
         />

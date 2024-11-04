@@ -14,7 +14,7 @@ export function NavigationMenuAboutMe({
     <li className="flex flex-col gap-1">
       <NavigationMenuCategorieTitle navigationMenuTitle="Quem sou eu" />
       <NavigationMenuLink
-        to="/"
+        to="/pt-BR/meus-projetos"
         navigationTitle="Projetos"
         onClick={onLinkClick}
         navigationIcon={

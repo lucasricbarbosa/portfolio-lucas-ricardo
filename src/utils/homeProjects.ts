@@ -39,14 +39,4 @@ export const homeProjects = [
     projectLink: 'https://example.com/blog',
     projectGithubLink: 'https://github.com/username/blog-platform',
   },
-  {
-    index: 4,
-    projectMockup: 'src/assets/project-mockup.png',
-    projectTitle: 'Weather App',
-    projectDescription:
-      'A weather application that provides real-time weather data, forecasts, and alerts for multiple cities using an external API.',
-    projectStacks: 'React Native, Redux, OpenWeather API',
-    projectLink: 'https://example.com/weather-app',
-    projectGithubLink: 'https://github.com/username/weather-app',
-  },
 ]
