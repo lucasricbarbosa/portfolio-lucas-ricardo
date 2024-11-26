@@ -1,11 +1,11 @@
-import { ExternalLink } from 'lucide-react'
-import { ReactNode } from 'react'
-import { Link, LinkProps } from 'react-router-dom'
+import { ExternalLink } from 'lucide-react';
+import { ReactNode } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
 
 interface NavigationMenuLinkProps extends LinkProps {
-  navigationIcon: ReactNode
-  navigationTitle: string
-  navigationIsLink?: boolean
+  navigationIcon: ReactNode;
+  navigationTitle: string;
+  navigationIsLink?: boolean;
 }
 
 export function NavigationMenuLink({
@@ -27,5 +27,5 @@ export function NavigationMenuLink({
         <ExternalLink className="size-4 text-primary" />
       )}
     </Link>
-  )
+  );
 }

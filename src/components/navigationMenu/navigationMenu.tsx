@@ -1,28 +1,33 @@
-import { Home, Menu } from 'lucide-react'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Home, Menu } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import profilePicture from '../../assets/profile-picture.png'
-import { DowloadCVButton } from '../dowloadCVButton'
-import { ConfigurationMenu } from '../themes/configurationMenu'
-import { Button } from '../ui/button'
-import { NavigationMenuAboutMe } from './navigationMenuAboutMe'
-import { NavigationMenuLink } from './navigationMenuLink'
-import { NavigationMenuMySocials } from './navigationMySocials'
+import profilePicture from '../../assets/profile-picture.png';
+import { DowloadCVButton } from '../dowloadCVButton';
+import { ConfigurationMenu } from '../themes/configurationMenu';
+import { Button } from '../ui/button';
+import { useNavigationMenu } from './context/navigationMenuContext';
+import { NavigationMenuAboutMe } from './navigationMenuAboutMe';
+import { NavigationMenuLink } from './navigationMenuLink';
+import { NavigationMenuMySocials } from './navigationMySocials';
 
 export function NavigationMenu() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const { setSelectedMenu } = useNavigationMenu();
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <aside className="fixed top-0 z-50 w-full border-b border-r md:h-[100dvh] md:w-72 md:border-b-0">
       <div className="flex h-full w-full flex-col overflow-hidden bg-background transition-all duration-300">
         <header className="flex items-center justify-between border-b p-3 px-8 md:px-3">
           <Link
-            onClick={toggleSidebar}
+            onClick={() => {
+              toggleSidebar();
+              setSelectedMenu('Início');
+            }}
             to="/pt-BR"
             className="flex items-center max-[390px]:hidden"
           >
@@ -56,7 +61,10 @@ export function NavigationMenu() {
           <ul className="h-full p-3">
             <li>
               <NavigationMenuLink
-                onClick={toggleSidebar}
+                onClick={() => {
+                  toggleSidebar();
+                  setSelectedMenu('Início');
+                }}
                 to="/pt-BR"
                 navigationTitle="Início"
                 navigationIcon={
@@ -74,5 +82,5 @@ export function NavigationMenu() {
         </div>
       </div>
     </aside>
-  )
+  );
 }

@@ -1,11 +1,11 @@
 export interface StacksProps {
-  name: string
-  image: string
+  name: string;
+  image: string;
 }
 
 interface StacksListProps {
-  frontend: StacksProps[]
-  backend: StacksProps[]
+  frontend: StacksProps[];
+  backend: StacksProps[];
 }
 
 export const stacksList: StacksListProps = {
@@ -73,4 +73,4 @@ export const stacksList: StacksListProps = {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/260px-Unofficial_JavaScript_logo_2.svg.png',
     },
   ],
-}
+};

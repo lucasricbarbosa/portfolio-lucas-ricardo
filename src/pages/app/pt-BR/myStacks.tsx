@@ -1,34 +1,34 @@
-import { Search } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-import { PageTitle } from '@/components/pageTitle'
-import { SectionTitle } from '@/components/sectionTitle'
-import { StackItem } from '@/components/stackPage/stackItem'
-import { stacksList, StacksProps } from '@/utils/stacks'
+import { PageTitle } from '@/components/pageTitle';
+import { SectionTitle } from '@/components/sectionTitle';
+import { StackItem } from '@/components/stackPage/stackItem';
+import { stacksList, StacksProps } from '@/utils/stacks';
 
 export function MyStacks() {
-  const [frontendStacks, setFrontendStacks] = useState<StacksProps[]>([])
-  const [backendStacks, setBackendStacks] = useState<StacksProps[]>([])
-  const [search, setSearch] = useState('')
+  const [frontendStacks, setFrontendStacks] = useState<StacksProps[]>([]);
+  const [backendStacks, setBackendStacks] = useState<StacksProps[]>([]);
+  const [search, setSearch] = useState('');
 
-  console.log('renderizou')
+  console.log('renderizou');
 
   useEffect(() => {
-    setFrontendStacks(stacksList.frontend)
-    setBackendStacks(stacksList.backend)
-  }, [])
+    setFrontendStacks(stacksList.frontend);
+    setBackendStacks(stacksList.backend);
+  }, []);
 
   const filteredFrontendStacks = search.length
     ? frontendStacks.filter((project) =>
         project.name.toLowerCase().includes(search.toLowerCase()),
       )
-    : frontendStacks
+    : frontendStacks;
 
   const filteredBackendStacks = search.length
     ? backendStacks.filter((project) =>
         project.name.toLowerCase().includes(search.toLowerCase()),
       )
-    : backendStacks
+    : backendStacks;
 
   return (
     <>
@@ -91,5 +91,5 @@ export function MyStacks() {
         <></>
       )}
     </>
-  )
+  );
 }

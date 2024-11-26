@@ -1,5 +1,5 @@
 interface NavigationMenuCategorieTitleProps {
-  navigationMenuTitle: string
+  navigationMenuTitle: string;
 }
 
 export function NavigationMenuCategorieTitle({
@@ -9,5 +9,5 @@ export function NavigationMenuCategorieTitle({
     <h3 className="pb-1 pl-3 pt-6 text-xs text-muted-foreground">
       {navigationMenuTitle}
     </h3>
-  )
+  );
 }

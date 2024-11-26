@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 interface CardInfoProps {
-  cardInfoTitle: string
-  cardInfoSubtitle: string
-  cardInfoThirdText?: string
-  cardInfoImage: string
-  cardInfoAlt: string
-  delay?: number
+  cardInfoTitle: string;
+  cardInfoSubtitle: string;
+  cardInfoThirdText?: string;
+  cardInfoImage: string;
+  cardInfoAlt: string;
+  delay?: number;
 }
 
 export function CardInfo({
@@ -35,11 +35,9 @@ export function CardInfo({
       viewport={{ once: true }}
       className="flex items-center gap-2"
     >
-      <img
-        className="size-12 rounded border"
-        src={cardInfoImage}
-        alt={cardInfoAlt}
-      />
+      <div className="overflow-hidden rounded border bg-white">
+        <img className="size-12" src={cardInfoImage} alt={cardInfoAlt} />
+      </div>
       <div>
         <h3 className="text-sm font-semibold text-foreground">
           {cardInfoTitle}
@@ -48,5 +46,5 @@ export function CardInfo({
         <p className="text-xs text-muted-foreground">{cardInfoThirdText}</p>
       </div>
     </motion.div>
-  )
+  );
 }

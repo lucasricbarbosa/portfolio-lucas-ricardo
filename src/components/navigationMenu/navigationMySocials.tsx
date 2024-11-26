@@ -1,7 +1,7 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react';
 
-import { NavigationMenuCategorieTitle } from './navigationMenuCategorieTitle'
-import { NavigationMenuLink } from './navigationMenuLink'
+import { NavigationMenuCategorieTitle } from './navigationMenuCategorieTitle';
+import { NavigationMenuLink } from './navigationMenuLink';
 
 export function NavigationMenuMySocials() {
   return (
@@ -35,5 +35,5 @@ export function NavigationMenuMySocials() {
         navigationIsLink={true}
       />
     </li>
-  )
+  );
 }

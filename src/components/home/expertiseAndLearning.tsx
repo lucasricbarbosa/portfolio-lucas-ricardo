@@ -1,11 +1,11 @@
-import frontEndLogo from '@/assets/front-end-development-logo.svg'
-import googleLogo from '@/assets/google-logo.svg'
-import reactLogo from '@/assets/react-logo.svg'
-import uxUiLogo from '@/assets/ux-ui-logo.svg'
-import webDevelopmentLogo from '@/assets/web-development-logo.svg'
+import frontEndLogo from '@/assets/front-end-development-logo.svg';
+import googleLogo from '@/assets/google-logo.svg';
+import reactLogo from '@/assets/react-logo.svg';
+import uxUiLogo from '@/assets/ux-ui-logo.svg';
+import webDevelopmentLogo from '@/assets/web-development-logo.svg';
 
-import { CardInfo } from '../cards/cardInfo'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
+import { CardInfo } from '../cards/cardInfo';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 export function ExpertiseAndLearning() {
   return (
@@ -23,8 +23,8 @@ export function ExpertiseAndLearning() {
             delay={0.2}
           />
           <CardInfo
-            cardInfoTitle="Desenvolvimento Web"
-            cardInfoSubtitle="Node, Design, SQL e muito mais"
+            cardInfoTitle="Desenvolvimento Full-Stack"
+            cardInfoSubtitle="NextJS, Nest, Prisma e muito mais"
             cardInfoAlt="Ícone de um layput"
             cardInfoImage={webDevelopmentLogo}
             delay={0.5}
@@ -57,8 +57,15 @@ export function ExpertiseAndLearning() {
             cardInfoImage={googleLogo}
             delay={0.5}
           />
+          <CardInfo
+            cardInfoTitle="Websocket"
+            cardInfoSubtitle="Nest/Node"
+            cardInfoAlt="Logotipo do Socket.io"
+            cardInfoImage="https://images.saasworthy.com/tr:w-160,h-0,c-at_max,e-sharpen-1/socketio_30421_logo_1619604506_tdxqo.png"
+            delay={0.5}
+          />
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
