@@ -1,7 +1,7 @@
-import { ChevronRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 export function AboutMeHome() {
   return (
@@ -26,5 +26,5 @@ export function AboutMeHome() {
         </span>
       </CardContent>
     </Card>
-  )
+  );
 }

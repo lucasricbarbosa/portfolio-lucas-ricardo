@@ -1,18 +1,18 @@
-import { motion } from 'framer-motion'
-import { ArrowUpRight, Github } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { Button } from '../ui/button'
-import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog'
+import { Button } from '../ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
 
 interface ProjectWrapperProps {
-  index: number
-  projectMockup: string
-  projectTitle: string
-  projectDescription: string
-  projectStacks: string
-  projectLink: string
-  projectGithubLink: string
+  index: number;
+  projectMockup: string;
+  projectTitle: string;
+  projectDescription: string;
+  projectStacks: string;
+  projectLink: string;
+  projectGithubLink: string;
 }
 
 export function ProjectWrapper({
@@ -71,5 +71,5 @@ export function ProjectWrapper({
         </Link>
       </div>
     </motion.div>
-  )
+  );
 }

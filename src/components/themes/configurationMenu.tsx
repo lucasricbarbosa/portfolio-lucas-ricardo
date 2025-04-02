@@ -1,7 +1,7 @@
-import { Moon, Settings, Sun } from 'lucide-react'
+import { Moon, Settings, Sun } from 'lucide-react';
 
-import { useTheme } from '@/components/themes/theme-provider'
-import { Button } from '@/components/ui/button'
+import { useTheme } from '@/components/themes/theme-provider';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,14 +9,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from '@/components/ui/dropdown-menu';
 
-import { Brazil } from '../flags/brazil'
-import { Spain } from '../flags/spain'
-import { UnitedStates } from '../flags/united-states'
+import { Brazil } from '../flags/brazil';
+import { UnitedStates } from '../flags/united-states';
 
 export function ConfigurationMenu() {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -51,10 +50,7 @@ export function ConfigurationMenu() {
         <DropdownMenuItem>
           <Brazil className="mr-2 size-4" /> Português
         </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Spain className="mr-2 size-4" /> Espanhol
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

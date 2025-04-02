@@ -1,10 +1,10 @@
-import { ChevronRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { homeProjects } from '@/utils/homeProjects'
+import { homeProjects } from '@/utils/homeProjects';
 
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
-import { ProjectWrapper } from './projectWrapper'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { ProjectWrapper } from './projectWrapper';
 
 export function Projects() {
   return (
@@ -35,5 +35,5 @@ export function Projects() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

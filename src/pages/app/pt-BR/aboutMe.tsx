@@ -1,17 +1,17 @@
-import { motion } from 'framer-motion'
-import { Linkedin } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { Linkedin } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-import graduationImg from '@/assets/graduation-img.png'
-import profilePicture from '@/assets/profile-picture-2.jpg'
-import { ListItem } from '@/components/aboutMePage/listItem'
-import { SpotifyMusicPlayer } from '@/components/aboutMePage/spotifyMusicPlayer'
-import { BuildTogether } from '@/components/buildTogether'
-import { PageTitle } from '@/components/pageTitle'
-import { SectionTitle } from '@/components/sectionTitle'
-import { Button } from '@/components/ui/button'
-import { listItems } from '@/utils/aboutMeListItens'
+import graduationImg from '@/assets/graduation-img.png';
+import profilePicture from '@/assets/profile-picture-2.jpg';
+import { ListItem } from '@/components/aboutMePage/listItem';
+import { SpotifyMusicPlayer } from '@/components/aboutMePage/spotifyMusicPlayer';
+import { BuildTogether } from '@/components/buildTogether';
+import { PageTitle } from '@/components/pageTitle';
+import { SectionTitle } from '@/components/sectionTitle';
+import { Button } from '@/components/ui/button';
+import { listItems } from '@/utils/aboutMeListItens';
 
 export function AboutMe() {
   return (
@@ -193,5 +193,5 @@ export function AboutMe() {
         <BuildTogether />
       </motion.div>
     </>
-  )
+  );
 }

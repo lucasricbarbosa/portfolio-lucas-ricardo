@@ -25,7 +25,6 @@ export function NavigationMenu() {
         <header className="flex items-center justify-between border-b p-3 px-8 md:px-3">
           <Link
             onClick={() => {
-              toggleSidebar();
               setSelectedMenu('Início');
             }}
             to="/pt-BR"

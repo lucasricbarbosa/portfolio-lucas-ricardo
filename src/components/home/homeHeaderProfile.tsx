@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { homeHeaderBadges } from '@/utils/homeHeaderBadges'
+import { homeHeaderBadges } from '@/utils/homeHeaderBadges';
 
-import profilePicture from '../../assets/profile-picture.png'
-import { Badge } from '../ui/badge'
+import profilePicture from '../../assets/profile-picture.png';
+import { Badge } from '../ui/badge';
 
 interface HomeHeaderProfileProps {
-  badge: string
+  badge: string;
 }
 
 export function HomeHeaderProfile() {
@@ -102,7 +102,7 @@ export function HomeHeaderProfile() {
                     {badge.badge}
                   </Badge>
                 </motion.div>
-              )
+              );
             })}
           </motion.div>
         </div>
@@ -121,5 +121,5 @@ export function HomeHeaderProfile() {
         </Badge>
       </div>
     </div>
-  )
+  );
 }

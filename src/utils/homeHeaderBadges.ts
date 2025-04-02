@@ -4,4 +4,4 @@ export const homeHeaderBadges = [
   { badge: 'Typescript' },
   { badge: 'Javascript' },
   { badge: 'UX/UI Design' },
-]
+];
