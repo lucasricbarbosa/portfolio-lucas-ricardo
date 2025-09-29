@@ -17,6 +17,7 @@ export const homeProjects = [
       'Uma página de apresentação para uma empresa de tecnologia e marketing, feita do design ao código por mim.',
     projectStacks: 'React, Typescript, TailwindCSS, ShadcnUI e Framer Motion',
     projectLink: 'https://blcomunicacoes-web.vercel.app/',
+    projectGithubLink: 'https://github.com/lucasricbarbosa/fluxDraw/',
   },
   {
     index: 2,
