@@ -6,7 +6,7 @@ export function DowloadCVButton() {
   const handleDownload = () => {
     const link = document.createElement('a');
 
-    link.href = '/publi/curriculo-full-lucas-ricardo.pdf';
+    link.href = 'public/curriculo-full-lucas-ricardo.pdf';
 
     link.download = 'curriculo-lucas-ricardo.pdf';
 
