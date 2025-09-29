@@ -17,12 +17,12 @@ export function AboutMeHome() {
       </CardHeader>
       <CardContent>
         <span className="text-muted-foreground">
-          Hello, my name is Lucas Ricardo, I am a dedicated front-end developer,
-          with extensive experience in technologies such as NodeJS and ReactJS,
-          and a track record with notable clients such as Uber Chip, Correios
-          Celular and Carrefour at Pagtel, specializing in robust and
-          user-friendly solutions to the user, prioritizing scalability,
-          accessibility and optimized performance.
+          Meu nome é Lucas Ricardo Barbosa, sou formado em Análise e
+          Desenvolvimento de Sistemas e tenho construído minha carreira na área
+          de desenvolvimento de software, atuando principalmente como
+          desenvolvedor full-stack. Com experiência em diversas tecnologias,
+          tais como React, Node, Typescript, Next.js, React Native, entre
+          outras.
         </span>
       </CardContent>
     </Card>

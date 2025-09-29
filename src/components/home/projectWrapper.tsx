@@ -13,6 +13,7 @@ interface ProjectWrapperProps {
   projectStacks: string;
   projectLink: string;
   projectGithubLink: string;
+  isProjectGithubLink?: boolean;
 }
 
 export function ProjectWrapper({
@@ -23,6 +24,7 @@ export function ProjectWrapper({
   projectStacks,
   projectLink,
   projectGithubLink,
+  isProjectGithubLink,
 }: ProjectWrapperProps) {
   return (
     <motion.div
@@ -43,14 +45,18 @@ export function ProjectWrapper({
         <DialogTrigger asChild>
           <div className="group cursor-zoom-in overflow-hidden rounded">
             <img
-              className="h-full w-full rounded transition-all duration-300 group-hover:scale-110"
+              className="aspect-video h-full w-full rounded object-cover transition-all duration-300 group-hover:scale-110"
               src={projectMockup}
               alt=""
             />
           </div>
         </DialogTrigger>
-        <DialogContent>
-          <img className="h-full w-full" src={projectMockup} alt="" />
+        <DialogContent className="min-h-[60vh] w-full min-w-[60vw]">
+          <img
+            className="h-full min-h-[40vh] w-full min-w-[40vw] object-cover"
+            src={projectMockup}
+            alt=""
+          />
         </DialogContent>
       </Dialog>
       <h3 className="pb-1 pt-6 text-xl font-semibold">{projectTitle}</h3>
@@ -64,11 +70,13 @@ export function ProjectWrapper({
             <ArrowUpRight /> Visitar
           </Button>
         </Link>
-        <Link to={projectGithubLink}>
-          <Button variant={'outline'}>
-            <Github /> Código fonte
-          </Button>
-        </Link>
+        {isProjectGithubLink && (
+          <Link to={projectGithubLink}>
+            <Button variant={'outline'}>
+              <Github /> Código fonte
+            </Button>
+          </Link>
+        )}
       </div>
     </motion.div>
   );

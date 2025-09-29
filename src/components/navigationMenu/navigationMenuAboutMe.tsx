@@ -1,6 +1,7 @@
 import { BookOpenText, FolderGit2, LaptopMinimal, Layers } from 'lucide-react';
 import { useContext } from 'react';
 
+import { Button } from '../ui/button';
 import { NavigationMenuContext } from './context/navigationMenuContext';
 import { NavigationMenuCategorieTitle } from './navigationMenuCategorieTitle';
 import { NavigationMenuLink } from './navigationMenuLink';
@@ -22,14 +23,16 @@ export function NavigationMenuAboutMe({
   return (
     <li className="flex flex-col gap-1">
       <NavigationMenuCategorieTitle navigationMenuTitle="Quem sou eu" />
-      <NavigationMenuLink
-        to="/pt-BR/meus-projetos"
-        navigationTitle="Projetos"
-        navigationIcon={
+      <Button
+        disabled
+        className={`group flex items-center justify-between rounded bg-transparent px-4 py-2 text-foreground transition-all duration-300 hover:bg-muted`}
+      >
+        <div className="flex items-center gap-2">
           <FolderGit2 className="size-4 transition-all duration-300 group-hover:text-primary" />
-        }
-        onClick={() => handleLinkClick('Projetos')}
-      />
+          <p className="text-sm font-medium">Projetos</p>
+        </div>
+        <p className="text-xs">(Em breve)</p>
+      </Button>
       <NavigationMenuLink
         to="/pt-BR/sobre-mim"
         navigationTitle="Sobre mim"

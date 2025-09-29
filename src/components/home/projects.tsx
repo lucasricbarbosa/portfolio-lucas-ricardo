@@ -30,6 +30,7 @@ export function Projects() {
               projectTitle={project.projectTitle}
               key={index * Math.random()}
               index={index}
+              isProjectGithubLink={project?.isProjectGithubLink}
             />
           ))}
         </div>

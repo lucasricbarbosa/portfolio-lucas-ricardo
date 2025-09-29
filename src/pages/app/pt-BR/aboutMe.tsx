@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ export function AboutMe() {
         />
         <section className="flex flex-col gap-5">
           <span className="text-base text-muted-foreground">
-            Meu nome é João, mais conhecido como Biro e tenho 31 anos.
+            Meu nome é Lucas, sou formado em ADS e tenho 22 anos.
           </span>
           <span className="text-base text-muted-foreground">
             Sou um programador Front-end com em média 2 anos de experiência com
@@ -48,14 +48,14 @@ export function AboutMe() {
             ReactJS, Next.js, Tailwind CSS, Git e GitHub e muito mais...
           </span>
           <span className="text-base text-muted-foreground">
-            Ao longo da minha trajetória como instrutor técnico e programador
-            front-end, adquiri experiência em metodologias ágeis como Scrum e
-            Kanban. Estou disponível para contribuir com minha expertise em JS,
-            TS, React, Next.js e Node.js para a sua equipe.
+            Ao longo da minha trajetória como programador e engenheiro
+            full-stack e front-end, adquiri experiência em metodologias ágeis
+            como Scrum e Kanban. Estou disponível para contribuir com minha
+            expertise em JS, TS, React, Next.js e Node.js para a sua equipe.
           </span>
           <span className="text-base text-muted-foreground">
-            Além disso, gosto de construir projetos pessoais e produzir
-            conteúdos para minhas redes sociais.
+            Sou movido por desafios e sempre busco novas formas de melhorar
+            minhas habilidades e expandir meu conhecimento.
           </span>
         </section>
       </motion.section>
@@ -112,12 +112,12 @@ export function AboutMe() {
           Apresentação projeto SAPEX
         </p>
         <span className="block pt-6">
-          Fora do âmbito profissional, sou um entusiasta de várias formas de
-          arte e entretenimento. A música, em particular, ocupa um lugar
-          especial no meu coração. Encontro consolo nos ritmos melódicos e na
-          profundidade lírica de diversos gêneros, muitas vezes utilizando-a
-          como fonte de inspiração durante minhas sessões de programação. Você
-          pode conferir mais sobre meu gosto musical no meu perfil do Last.fm.
+          Sou formado em Análise e Desenvolvimento de Sistemas, onde tive a
+          oportunidade de aprender desde a lógica de programação até o
+          desenvolvimento de aplicações completas. Foi um período em que pude
+          experimentar bastante, colocar a mão na massa em projetos práticos e
+          despertar ainda mais meu interesse por criar soluções tecnológicas que
+          realmente fazem a diferença.
         </span>
       </motion.div>
       <motion.div
@@ -137,12 +137,12 @@ export function AboutMe() {
       >
         <SectionTitle text="Interesses pessoais" />
         <span>
-          Fora do âmbito profissional, sou um entusiasta de várias formas de
-          arte e entretenimento. A música, em particular, ocupa um lugar
-          especial no meu coração. Encontro consolo nos ritmos melódicos e na
-          profundidade lírica de diversos gêneros, muitas vezes utilizando-a
-          como fonte de inspiração durante minhas sessões de programação. Você
-          pode conferir mais sobre meu gosto musical no meu perfil do Last.fm.
+          Fora do âmbito profissional, tenho uma grande paixão por música, que
+          me acompanha no dia a dia e muitas vezes serve como inspiração durante
+          minhas sessões de programação. Além disso, gosto bastante de futebol e
+          videogames, que considero ótimas formas de lazer e também de manter a
+          mente ativa. Essas atividades equilibram minha rotina, trazendo
+          momentos de descontração e criatividade.
         </span>
         <section className="grid grid-cols-1 gap-x-5 pt-6 sm:grid-cols-2">
           <SpotifyMusicPlayer musicLink="0YPuRrM2NwzdtuShUKkts6" />
@@ -153,40 +153,33 @@ export function AboutMe() {
         <section className="my-10">
           <SectionTitle text="Entre em contato comigo" />
           <span>
-            Fora do âmbito profissional, sou um entusiasta de várias formas de
-            arte e entretenimento. A música, em particular, ocupa um lugar
-            especial no meu coração. Encontro consolo nos ritmos melódicos e na
-            profundidade lírica de diversos gêneros, muitas vezes utilizando-a
-            como fonte de inspiração durante minhas sessões de programação. Você
-            pode conferir mais sobre meu gosto musical no meu perfil do Last.fm.
+            Fora do âmbito profissional, tenho uma grande paixão por música, que
+            me acompanha no dia a dia e muitas vezes serve como inspiração
+            durante minhas sessões de programação. Além disso, gosto bastante de
+            futebol e videogames, que considero ótimas formas de lazer e também
+            de manter a mente ativa. Essas atividades equilibram minha rotina,
+            trazendo momentos de descontração e criatividade.
           </span>
-          <nav className="grid grid-cols-1 items-center gap-4 pt-6 md:grid-cols-3 md:gap-5">
+          <nav className="grid grid-cols-1 items-center gap-4 pt-6 md:grid-cols-2 md:gap-5">
             <Button asChild className="" variant={'outline'}>
               <Link
-                to={'/'}
+                to={'https://www.linkedin.com/in/lucas-ricardo-barbosa/'}
                 className="flex items-center justify-center gap-3 text-sm font-medium"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Linkedin size={20} />
                 LinkedIn
               </Link>
             </Button>
             <Button asChild className="" variant={'outline'}>
-              <Link
-                to={'/'}
+              <a
+                href="mailto:lucasricardobarb@gmail.com"
                 className="flex items-center justify-center gap-3 text-sm font-medium"
               >
-                <Linkedin size={20} />
-                LinkedIn
-              </Link>
-            </Button>
-            <Button asChild className="" variant={'outline'}>
-              <Link
-                to={'/'}
-                className="flex items-center justify-center gap-3 text-sm font-medium"
-              >
-                <Linkedin size={20} />
-                LinkedIn
-              </Link>
+                <Mail size={20} />
+                E-mail
+              </a>
             </Button>
           </nav>
         </section>

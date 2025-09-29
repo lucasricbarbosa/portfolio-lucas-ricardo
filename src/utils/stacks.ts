@@ -72,8 +72,7 @@ const stacksList: CategoryProps[] = [
       },
       {
         name: 'Tanstack Query',
-        image:
-          'https://react-query-v3.tanstack.com/_next/static/images/logo-3d90e510d3b4f3fa8b8f0e98489973f0.svg',
+        image: 'https://i.imgur.com/Kqxbl5Q.png',
         url: 'https://tanstack.com/query/latest',
       },
       {
@@ -94,7 +93,8 @@ const stacksList: CategoryProps[] = [
       },
       {
         name: 'Framer Motion',
-        image: 'https://framer.com/images/social/framer-motion.png',
+        image:
+          'https://user-images.githubusercontent.com/38039349/60953119-d3c6f300-a2fc-11e9-9596-4978e5d52180.png',
         url: 'https://www.framer.com/motion/',
       },
       {
@@ -104,12 +104,13 @@ const stacksList: CategoryProps[] = [
       },
       {
         name: 'i18n',
-        image: 'https://www.i18next.com/static/favicon/favicon-32x32.png',
+        image:
+          'https://miro.medium.com/v2/resize:fit:806/1*B7NETmU4gIYjuUaAyP9p5g.png',
         url: 'https://www.i18next.com/',
       },
       {
         name: 'Radix',
-        image: 'https://avatars.githubusercontent.com/u/30573078?s=200&v=4',
+        image: 'https://avatars.githubusercontent.com/u/75042455?s=280&v=4',
         url: 'https://www.radix-ui.com/',
       },
     ],
@@ -119,17 +120,18 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Cypress',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://yt3.googleusercontent.com/MHW3vhUeDZZIKMm-T63-zkvPQsYab4OpbyvT8ifxmfz0E-fqIWj9r8tP4qITq2KLWI2eqK7q3A=s900-c-k-c0x00ffffff-no-rj',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Playwright',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image: 'https://playwright.dev/img/playwright-logo.svg',
         url: 'https://nestjs.com/',
       },
       {
         name: 'Vitest',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image: 'https://vitest.dev/logo-shadow.svg',
         url: 'https://www.prisma.io/',
       },
     ],
@@ -139,22 +141,26 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Adobe Photoshop',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://s2-techtudo.glbimg.com/4rMDrjzK4ysRN0ISLUzkJg3NdoY=/fit-in/324x299/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/W/I/KJltLYRo67CdyeX5yD2g/screenshot-2023-02-04-at-13.07.18.png',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Adobe XD',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/1200px-Adobe_XD_CC_icon.svg.png',
         url: 'https://nestjs.com/',
       },
       {
         name: 'Figma',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS62LVhts8-ERiNmlrfHQShVXasUYH38KKSRw&s',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Canva',
-        image: 'https://avatars.githubusercontent.com/u/114772946?s=200&v=4',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQbNiqqZaOQ7ISQi9agBPmkChmcz4PKEbQQ&s',
         url: 'https://shadcn.dev/',
       },
     ],
@@ -169,42 +175,47 @@ const stacksList: CategoryProps[] = [
       },
       {
         name: 'Express',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image: 'https://cdn.worldvectorlogo.com/logos/expressjs.svg',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Javascript',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png',
         url: 'https://nestjs.com/',
       },
       {
         name: 'Typescript',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Prisma',
-        image: 'https://avatars.githubusercontent.com/u/114772946?s=200&v=4',
-        url: 'https://shadcn.dev/',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLaYNkM-x8BzdMkvxae3kw-zosF1t43WLMvg&s',
+        url: 'https://www.prisma.io/',
       },
       {
         name: 'TypeORM',
-        image: 'https://mui.com/static/logo.png',
+        image:
+          'https://images.seeklogo.com/logo-png/44/1/typeorm-logo-png_seeklogo-443592.png',
         url: 'https://mui.com/',
       },
       {
         name: 'Java',
-        image: 'https://mui.com/static/logo.png',
+        image: 'https://cdn.worldvectorlogo.com/logos/java.svg',
         url: 'https://mui.com/',
       },
       {
         name: 'Nest',
-        image: 'https://mui.com/static/logo.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg',
         url: 'https://mui.com/',
       },
       {
         name: 'Socket.IO',
-        image: 'https://mui.com/static/logo.png',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg',
         url: 'https://mui.com/',
       },
     ],
@@ -214,17 +225,18 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Swagger',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Storybook',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image: 'https://www.svgrepo.com/show/354397/storybook-icon.svg',
         url: 'https://nestjs.com/',
       },
       {
         name: 'GitBook',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image: 'https://www.svgrepo.com/show/376323/gitbook.svg',
         url: 'https://www.prisma.io/',
       },
     ],
@@ -234,17 +246,19 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'MySQL',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb9eimO5lZLpyM-qYudMVu6KTPj4U2RL715g&s',
         url: 'https://nodejs.org/',
       },
       {
         name: 'PostgreSQL',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1163px-Postgresql_elephant.svg.png',
         url: 'https://nestjs.com/',
       },
       {
         name: 'GitBook',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image: 'https://www.svgrepo.com/show/376323/gitbook.svg',
         url: 'https://www.prisma.io/',
       },
     ],
@@ -254,27 +268,32 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Docker',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10zOHBiK2OveAeoSOr2_EPxyim_njN1ZeQw&s',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Firebase',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png?hl=pt-br',
         url: 'https://nestjs.com/',
       },
       {
         name: 'Vercel',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFggf9yNRN9xCYku8XMEkSE0LU9uMhkYbehQ&s',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Render',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://images.seeklogo.com/logo-png/53/1/render-logo-png_seeklogo-532232.png',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Google Cloud',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://images.seeklogo.com/logo-png/33/1/google-cloud-logo-png_seeklogo-336116.png',
         url: 'https://www.prisma.io/',
       },
     ],
@@ -284,17 +303,19 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Git',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image: 'https://git-scm.com/images/logos/logomark-orange@2x.png',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Github',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
         url: 'https://nestjs.com/',
       },
       {
         name: 'Gitlab',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXu0b8AFSG1VWmGyE4jwfha6IWTR3ITZYKg&s',
         url: 'https://www.prisma.io/',
       },
     ],
@@ -304,57 +325,61 @@ const stacksList: CategoryProps[] = [
     items: [
       {
         name: 'Dark Reader',
-        image: 'https://nodejs.org/static/images/logo.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRzAVZHXCqWUsdcvjtaBRmG1h4C9gDDppnZg&s',
         url: 'https://nodejs.org/',
       },
       {
         name: 'Gitlens',
-        image: 'https://nestjs.com/img/logo-small.svg',
+        image:
+          'https://help.gitkraken.com/wp-content/uploads/gitlens-icon-hifidelity.png',
         url: 'https://nestjs.com/',
       },
       {
         name: 'ESLint',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/2328px-ESLint_logo.svg.png',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Prettier',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image: 'https://prettier.io/icon.png',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Material Icon Theme',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/logo.png',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Omni Theme',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSS7Y65ZIpDokJ6oeWtUsfeVptOb38y_lBZA&s',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Error Lens',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
-        url: 'https://www.prisma.io/',
-      },
-      {
-        name: 'Night Owl',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://usernamehw.gallerycdn.vsassets.io/extensions/usernamehw/errorlens/3.26.0/1745913515439/Microsoft.VisualStudio.Services.Icons.Default',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Rest Client',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://humao.gallerycdn.vsassets.io/extensions/humao/rest-client/0.25.1/1660918934840/Microsoft.VisualStudio.Services.Icons.Default',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Wappalyzer',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3FMQKXo2yCIniXcQ3H7EJv0qSwAYXzYksg&s',
         url: 'https://www.prisma.io/',
       },
       {
         name: 'Codeium',
-        image: 'https://cdn.worldvectorlogo.com/logos/prisma-2.svg',
+        image:
+          'https://images.prismic.io/sacra/Z4WDYZbqstJ99Zrs_codeiumlogo.jpeg?auto=format,compress',
         url: 'https://www.prisma.io/',
       },
     ],

@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function BuildTogether() {
   return (
@@ -12,16 +12,25 @@ export function BuildTogether() {
         vontade para me enviar uma mensagem.
       </p>
       <div className="flex items-center justify-center gap-3 border-t py-3">
-        <Link className="rounded border p-[6px] hover:bg-muted" to={'/'}>
+        <Link
+          className="rounded border p-[6px] hover:bg-muted"
+          to={'https://www.linkedin.com/in/lucas-ricardo-barbosa/'}
+        >
           <Linkedin size={24} className="text-card-foreground" />
         </Link>
-        <Link className="rounded border p-[6px] hover:bg-muted" to={'/'}>
+        <Link
+          className="rounded border p-[6px] hover:bg-muted"
+          to={'https://github.com/lucasricbarbosa/'}
+        >
           <Github size={24} className="text-card-foreground" />
         </Link>
-        <Link className="rounded border p-[6px] hover:bg-muted" to={'/'}>
+        <Link
+          className="rounded border p-[6px] hover:bg-muted"
+          to="mailto:lucasricardobarb@gmail.com"
+        >
           <Mail size={24} className="text-card-foreground" />
         </Link>
       </div>
     </div>
-  )
+  );
 }
