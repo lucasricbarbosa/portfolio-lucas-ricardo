@@ -6,7 +6,8 @@ export function DowloadCVButton() {
   const handleDownload = () => {
     const link = document.createElement('a');
 
-    link.href = 'public/curriculo-full-lucas-ricardo.pdf';
+    // Remova 'public/' do caminho - o Vite serve arquivos da public na raiz
+    link.href = '/curriculo-full-lucas-ricardo.pdf';
 
     link.download = 'curriculo-lucas-ricardo.pdf';
 
