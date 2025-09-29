@@ -1,7 +1,7 @@
 export const homeProjects = [
   {
     index: 0,
-    projectMockup: 'src/assets/zento-bg.png',
+    projectMockup: '/zento-bg.png',
     projectTitle: 'Zento UI',
     projectDescription:
       'Uma bibilioteca de componentes React para construir interfaces de usuário modernas e intuitivas.',
@@ -11,7 +11,7 @@ export const homeProjects = [
   },
   {
     index: 1,
-    projectMockup: 'src/assets/bl-bg.png',
+    projectMockup: '/bl-bg.png',
     projectTitle: 'Landing Page BL Tech',
     projectDescription:
       'Uma página de apresentação para uma empresa de tecnologia e marketing, feita do design ao código por mim.',
@@ -21,7 +21,7 @@ export const homeProjects = [
   },
   {
     index: 2,
-    projectMockup: 'src/assets/drawflux-bg.png',
+    projectMockup: '/drawflux-bg.png',
     projectTitle: 'DrawFlux',
     projectDescription:
       'Um drawl flow para criar e compartilhar diagramas de fluxo de dados e processos.',
@@ -32,7 +32,7 @@ export const homeProjects = [
   },
   {
     index: 3,
-    projectMockup: 'src/assets/iphone-bg.png',
+    projectMockup: '/iphone-bg.png',
     projectTitle: 'Landing Page do iPhone 15 Pro',
     projectDescription:
       'Página que contém as mais diversas animações e efeitos, utilizando GSAP, com um design impressionante.',
