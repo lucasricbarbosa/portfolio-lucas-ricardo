@@ -1,5 +1,6 @@
 import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { PageTitle } from '@/components/pageTitle';
 import { SectionTitle } from '@/components/sectionTitle';
@@ -9,6 +10,7 @@ import { CategoryProps, sortedStacksList, StacksProps } from '@/utils/stacks';
 export function MyStacks() {
   const [categories, setCategories] = useState<CategoryProps[]>([]);
   const [search, setSearch] = useState('');
+  const { t } = useTranslation();
 
   useEffect(() => {
     setCategories(sortedStacksList);
@@ -24,17 +26,14 @@ export function MyStacks() {
   return (
     <>
       <div>
-        <PageTitle text="Minhas tecnologias" />
-        <span className="block">
-          Essa página lista as principais tecnologias que venho aprendendo e
-          utilizando.{' '}
-        </span>
+        <PageTitle text={t('stacks.pageTitle')} />
+        <span className="block">{t('stacks.description')}</span>
         <div className="mt-6 flex w-full items-center justify-between rounded border bg-transparent px-4 py-2 text-sm font-normal">
           <input
             className="w-full bg-transparent outline-none"
             type="text"
             name="search"
-            placeholder="Buscar"
+            placeholder={t('stacks.searchPlaceholder')}
             onChange={(e) => setSearch(e.target.value)}
             value={search}
           />
@@ -48,8 +47,8 @@ export function MyStacks() {
         if (!filteredItems.length) return null;
 
         return (
-          <div className="mt-10" key={category.title}>
-            <SectionTitle text={category.title} />
+          <div className="mt-10" key={category.titleKey}>
+            <SectionTitle text={t(category.titleKey)} />
             <ul className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
               {filteredItems.map((stack, index) => (
                 <StackItem

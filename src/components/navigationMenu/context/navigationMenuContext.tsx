@@ -12,7 +12,7 @@ export const NavigationMenuContext = createContext<{
   setSelectedMenu: Dispatch<SetStateAction<string>>;
 }>({
   selectedMenu: '',
-  setSelectedMenu: () => {}, // Valor padrão inicial, pode ser uma função vazia
+  setSelectedMenu: () => {},
 });
 
 export const NavigationMenuProvider = ({
@@ -22,8 +22,6 @@ export const NavigationMenuProvider = ({
 }) => {
   const [selectedMenu, setSelectedMenu] = useState('');
 
-  console.log(selectedMenu);
-
   return (
     <NavigationMenuContext.Provider value={{ selectedMenu, setSelectedMenu }}>
       {children}
@@ -31,5 +29,4 @@ export const NavigationMenuProvider = ({
   );
 };
 
-// Custom hook para usar o contexto
 export const useNavigationMenu = () => useContext(NavigationMenuContext);

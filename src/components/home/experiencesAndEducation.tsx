@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { CardInfo } from '@/components/cards/cardInfo';
 import { DowloadCVButton } from '@/components/dowloadCVButton';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,11 +7,13 @@ import { studies } from '@/utils/studies';
 import { workplaces } from '@/utils/workplaces';
 
 export function ExperiencesAndEducation() {
+  const { t } = useTranslation();
+
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Sobre mim</CardTitle>
+          <CardTitle>{t('home.experiences.title')}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-start justify-between gap-3">
           <div className="flex max-h-fit flex-col gap-3 pb-4">
@@ -30,7 +34,7 @@ export function ExperiencesAndEducation() {
       </Card>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Educação</CardTitle>
+          <CardTitle>{t('home.education.title')}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col justify-between gap-3">
           {studies.map((study, index) => (

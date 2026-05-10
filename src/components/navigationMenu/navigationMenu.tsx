@@ -1,19 +1,20 @@
 import { Home, Menu } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 
 import profilePicture from '../../assets/profile-picture.png';
 import { DowloadCVButton } from '../dowloadCVButton';
 import { ConfigurationMenu } from '../themes/configurationMenu';
 import { Button } from '../ui/button';
-import { useNavigationMenu } from './context/navigationMenuContext';
 import { NavigationMenuAboutMe } from './navigationMenuAboutMe';
 import { NavigationMenuLink } from './navigationMenuLink';
 import { NavigationMenuMySocials } from './navigationMySocials';
 
 export function NavigationMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const { setSelectedMenu } = useNavigationMenu();
+  const { lang } = useParams<{ lang: string }>();
+  const { t } = useTranslation();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -24,19 +25,16 @@ export function NavigationMenu() {
       <div className="flex h-full w-full flex-col overflow-hidden bg-background transition-all duration-300">
         <header className="flex items-center justify-between border-b p-3 px-8 md:px-3">
           <Link
-            onClick={() => {
-              setSelectedMenu('Início');
-            }}
-            to="/pt-BR"
+            to={`/${lang}`}
             className="flex items-center max-[390px]:hidden"
           >
             <img className="size-9" src={profilePicture} alt="" />
             <div className="ml-2">
               <h4 className="text-sm font-medium text-foreground">
-                Lucas Ricardo
+                {t('hero.name')}
               </h4>
               <p className="text-xs font-normal text-muted-foreground">
-                Desenvolvedor Front-End
+                {t('hero.subtitle')}
               </p>
             </div>
           </Link>
@@ -49,7 +47,7 @@ export function NavigationMenu() {
               onClick={toggleSidebar}
             >
               <Menu className="size-5" />
-              <span className="sr-only">Opções de visualização</span>
+              <span className="sr-only">{t('nav.srViewOptions')}</span>
             </Button>
           </div>
         </header>
@@ -60,12 +58,10 @@ export function NavigationMenu() {
           <ul className="h-full p-3">
             <li>
               <NavigationMenuLink
-                onClick={() => {
-                  toggleSidebar();
-                  setSelectedMenu('Início');
-                }}
-                to="/pt-BR"
-                navigationTitle="Início"
+                end
+                onClick={toggleSidebar}
+                to={`/${lang}`}
+                navigationTitle={t('nav.home')}
                 navigationIcon={
                   <Home className="size-4 transition-all duration-300 group-hover:text-primary" />
                 }

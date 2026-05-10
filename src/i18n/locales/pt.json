@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Início",
+    "whoAmI": "Quem sou eu",
+    "projects": "Projetos",
+    "aboutMe": "Sobre mim",
+    "technologies": "Tecnologias",
+    "setup": "Setup",
+    "myNetworks": "Minhas redes",
+    "github": "Github",
+    "linkedin": "LinkedIn",
+    "email": "E-mail",
+    "comingSoon": "(Em breve)",
+    "srViewOptions": "Opções de visualização"
+  },
+  "config": {
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "language": "Idioma",
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+  "hero": {
+    "name": "Lucas Ricardo",
+    "subtitle": "Desenvolvedor Front-End",
+    "profileAlt": "Foto de perfil do Lucas Ricardo"
+  },
+  "home": {
+    "aboutMe": {
+      "title": "Sobre mim",
+      "seeMore": "Ver mais",
+      "description": "Meu nome é Lucas Ricardo Barbosa, sou formado em Análise e Desenvolvimento de Sistemas e tenho construído minha carreira na área de desenvolvimento de software, atuando principalmente como desenvolvedor full-stack. Com experiência em diversas tecnologias, tais como React, Node, Typescript, Next.js, React Native, entre outras."
+    },
+    "experiences": {
+      "title": "Experiências"
+    },
+    "education": {
+      "title": "Educação"
+    },
+    "projects": {
+      "title": "Projetos",
+      "seeAll": "Ver todos"
+    },
+    "expertise": {
+      "title": "Áreas de expertise"
+    },
+    "learning": {
+      "title": "Aprendendo"
+    },
+    "buildTogether": {
+      "title": "Vamos construir algo juntos?",
+      "description": "Se você tem algum projeto em mente ou gostou do meu trabalho, sinta-se à vontade para me enviar uma mensagem."
+    }
+  },
+  "cv": {
+    "download": "Baixar meu currículo"
+  },
+  "aboutMe": {
+    "pageTitle": "Sobre mim",
+    "intro1": "Meu nome é Lucas, sou formado em ADS e tenho 22 anos.",
+    "intro2": "Sou um programador Front-end com em média 2 anos de experiência com essas tecnologias: HTML, CSS, JavaScript, TypeScript, Tailwind CSS, ReactJS, Next.js, Tailwind CSS, Git e GitHub e muito mais...",
+    "intro3": "Ao longo da minha trajetória como programador e engenheiro full-stack e front-end, adquiri experiência em metodologias ágeis como Scrum e Kanban. Estou disponível para contribuir com minha expertise em JS, TS, React, Next.js e Node.js para a sua equipe.",
+    "intro4": "Sou movido por desafios e sempre busco novas formas de melhorar minhas habilidades e expandir meu conhecimento.",
+    "personalSummary": "Resumo pessoal e profissional",
+    "academicBackground": "Formação acadêmica",
+    "projectCaption": "Apresentação projeto SAPEX",
+    "academicDescription": "Sou formado em Análise e Desenvolvimento de Sistemas, onde tive a oportunidade de aprender desde a lógica de programação até o desenvolvimento de aplicações completas. Foi um período em que pude experimentar bastante, colocar a mão na massa em projetos práticos e despertar ainda mais meu interesse por criar soluções tecnológicas que realmente fazem a diferença.",
+    "personalInterests": "Interesses pessoais",
+    "personalInterestsDescription": "Fora do âmbito profissional, tenho uma grande paixão por música, que me acompanha no dia a dia e muitas vezes serve como inspiração durante minhas sessões de programação. Além disso, gosto bastante de futebol e videogames, que considero ótimas formas de lazer e também de manter a mente ativa. Essas atividades equilibram minha rotina, trazendo momentos de descontração e criatividade.",
+    "contactMe": "Entre em contato comigo",
+    "contactDescription": "Fora do âmbito profissional, tenho uma grande paixão por música, que me acompanha no dia a dia e muitas vezes serve como inspiração durante minhas sessões de programação. Além disso, gosto bastante de futebol e videogames, que considero ótimas formas de lazer e também de manter a mente ativa. Essas atividades equilibram minha rotina, trazendo momentos de descontração e criatividade."
+  },
+  "stacks": {
+    "pageTitle": "Minhas tecnologias",
+    "description": "Essa página lista as principais tecnologias que venho aprendendo e utilizando.",
+    "searchPlaceholder": "Buscar",
+    "categories": {
+      "frontend": "Frontend",
+      "tests": "Testes",
+      "design": "Design",
+      "backend": "Backend",
+      "documentation": "Documentação",
+      "database": "Banco de dados",
+      "infrastructure": "Infraestrutura",
+      "versioning": "Versionamento",
+      "extensions": "Extensões e plugins"
+    }
+  },
+  "setup": {
+    "pageTitle": "Setup",
+    "description": "Essa é uma lista de equipamentos e itens do meu setup que uso no dia a dia. Essa lista também possui itens que recomendo. Conforme for atualizando meu setup, atualizarei a lista também.",
+    "searchPlaceholder": "Buscar"
+  },
+  "expertise": {
+    "frontEnd": {
+      "title": "Desenvolvimento Front-End",
+      "subtitle": "NextJS, Typescript, React e muito mais",
+      "alt": "Ícone de um link em um computador"
+    },
+    "fullStack": {
+      "title": "Desenvolvimento Full-Stack",
+      "subtitle": "NextJS, Nest, Prisma e muito mais",
+      "alt": "Ícone de um layput"
+    },
+    "uxui": {
+      "title": "UX/UI Designer",
+      "subtitle": "Figma e Photoshop",
+      "alt": "Ícone de um xadrez"
+    }
+  },
+  "learning": {
+    "performance": {
+      "title": "Melhoria em performance",
+      "subtitle": "React",
+      "alt": "Logotipo React"
+    },
+    "cloud": {
+      "title": "Implementação em nuvem",
+      "subtitle": "Google",
+      "alt": "Logotipo do Google"
+    },
+    "websocket": {
+      "title": "Websocket",
+      "subtitle": "Nest/Node",
+      "alt": "Logotipo do Socket.io"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "pageTitle": "Meus projetos",
+    "visit": "Visitar",
+    "sourceCode": "Código fonte"
+  }
+}

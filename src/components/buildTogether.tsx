@@ -1,15 +1,17 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export function BuildTogether() {
+  const { t } = useTranslation();
+
   return (
     <div className="rounded-lg border bg-card pt-6 text-card-foreground shadow-sm">
       <h2 className="px-6 text-xl font-semibold leading-none tracking-tight">
-        Vamos construir algo juntos?
+        {t('home.buildTogether.title')}
       </h2>
       <p className="px-6 pb-6 pt-3 text-sm">
-        Se você tem algum projeto em mente ou gostou do meu trabalho, sinta-se à
-        vontade para me enviar uma mensagem.
+        {t('home.buildTogether.description')}
       </p>
       <div className="flex items-center justify-center gap-3 border-t py-3">
         <Link

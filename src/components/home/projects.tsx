@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 
 import { homeProjects } from '@/utils/homeProjects';
 
@@ -7,15 +8,18 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { ProjectWrapper } from './projectWrapper';
 
 export function Projects() {
+  const { t } = useTranslation();
+  const { lang } = useParams<{ lang: string }>();
+
   return (
     <Card className="overflow-hidden">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Projetos</CardTitle>
+        <CardTitle>{t('home.projects.title')}</CardTitle>
         <Link
           className="flex items-center text-xs font-medium text-primary"
-          to={'/'}
+          to={`/${lang}/projects`}
         >
-          Ver todos <ChevronRight className="ml-1 size-3" />
+          {t('home.projects.seeAll')} <ChevronRight className="ml-1 size-3" />
         </Link>
       </CardHeader>
       <CardContent className="flex flex-col items-start justify-between gap-3">

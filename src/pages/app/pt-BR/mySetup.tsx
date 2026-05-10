@@ -1,46 +1,44 @@
-import { Search } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { PageTitle } from '@/components/pageTitle'
-import { SetupItem } from '@/components/setup/sertupItem'
-import { setupItens } from '@/utils/setupItens'
+import { PageTitle } from '@/components/pageTitle';
+import { SetupItem } from '@/components/setup/sertupItem';
+import { setupItens } from '@/utils/setupItens';
 
 interface MySetupProps {
-  name: string
-  imageUrl: string
-  productLink: string
+  name: string;
+  imageUrl: string;
+  productLink: string;
 }
 
 export function MySetup() {
-  const [repos, setRepos] = useState<MySetupProps[]>([])
-  const [search, setSearch] = useState('')
+  const [repos, setRepos] = useState<MySetupProps[]>([]);
+  const [search, setSearch] = useState('');
+  const { t } = useTranslation();
 
   useEffect(() => {
-    setRepos(setupItens)
-  }, [])
+    setRepos(setupItens);
+  }, []);
 
   const filteredRepos =
     search.length > 0
       ? repos.filter((repo) =>
           repo.name.toLowerCase().includes(search.toLowerCase()),
         )
-      : []
+      : [];
 
   return (
     <div>
-      <PageTitle text="Setup" />
-      <span className="text-muted-foreground">
-        Essa é uma lista de equipamentos e itens do meu setup que uso no dia a
-        dia. Essa lista também possui itens que recomendo. Conforme for
-        atualizando meu setup, atualizarei a lista também.
-      </span>
+      <PageTitle text={t('setup.pageTitle')} />
+      <span className="text-muted-foreground">{t('setup.description')}</span>
 
       <div className="mt-6 flex w-full items-center justify-between rounded border bg-transparent px-4 py-2 text-sm font-normal">
         <input
           className="w-full bg-transparent outline-none"
           type="text"
           name="search"
-          placeholder="Buscar"
+          placeholder={t('setup.searchPlaceholder')}
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
@@ -58,7 +56,7 @@ export function MySetup() {
                 imageUrl={repo.imageUrl}
                 delay={0.3 * index}
               />
-            )
+            );
           })}
         </ul>
       ) : (
@@ -72,10 +70,10 @@ export function MySetup() {
                 imageUrl={repo.imageUrl}
                 delay={0.07 * index}
               />
-            )
+            );
           })}
         </ul>
       )}
     </div>
-  )
+  );
 }

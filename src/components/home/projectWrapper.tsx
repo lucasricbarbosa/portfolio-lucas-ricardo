@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import { Button } from '../ui/button';
@@ -26,18 +27,18 @@ export function ProjectWrapper({
   projectGithubLink,
   isProjectGithubLink,
 }: ProjectWrapperProps) {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{
         opacity: 0,
-        x: index % 2 === 0 ? -40 : 80, // Aplica animação apenas nos itens pares
+        x: index % 2 === 0 ? -40 : 80,
       }}
       whileInView={{
         opacity: 1,
         x: 0,
-        transition: {
-          duration: 1,
-        },
+        transition: { duration: 1 },
       }}
       viewport={{ once: true }}
     >
@@ -67,13 +68,13 @@ export function ProjectWrapper({
       <div className="flex items-center gap-2">
         <Link to={projectLink}>
           <Button className="text-white">
-            <ArrowUpRight /> Visitar
+            <ArrowUpRight /> {t('projects.visit')}
           </Button>
         </Link>
         {isProjectGithubLink && (
           <Link to={projectGithubLink}>
             <Button variant={'outline'}>
-              <Github /> Código fonte
+              <Github /> {t('projects.sourceCode')}
             </Button>
           </Link>
         )}

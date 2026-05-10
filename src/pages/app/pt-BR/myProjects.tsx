@@ -1,14 +1,18 @@
-import { ProjectWrapper } from '@/components/home/projectWrapper'
-import { PageTitle } from '@/components/pageTitle'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { backEndProjects } from '@/utils/backEndProjects'
-import { frontEndProjects } from '@/utils/frontEndProjects'
-import { uxUiDesignProjects } from '@/utils/uxUiDesignProjects'
+import { useTranslation } from 'react-i18next';
+
+import { ProjectWrapper } from '@/components/home/projectWrapper';
+import { PageTitle } from '@/components/pageTitle';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { backEndProjects } from '@/utils/backEndProjects';
+import { frontEndProjects } from '@/utils/frontEndProjects';
+import { uxUiDesignProjects } from '@/utils/uxUiDesignProjects';
 
 export function MyProjects() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <PageTitle text="Meus projetos" />
+      <PageTitle text={t('projects.pageTitle')} />
       <Card className="overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>Front-End</CardTitle>
@@ -73,5 +77,5 @@ export function MyProjects() {
         </CardContent>
       </Card>
     </>
-  )
+  );
 }

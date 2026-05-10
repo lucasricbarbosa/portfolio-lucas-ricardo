@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Home",
+    "whoAmI": "Who I Am",
+    "projects": "Projects",
+    "aboutMe": "About Me",
+    "technologies": "Technologies",
+    "setup": "Setup",
+    "myNetworks": "My Networks",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "comingSoon": "(Coming Soon)",
+    "srViewOptions": "View Options"
+  },
+  "config": {
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "language": "Language",
+    "english": "English",
+    "portuguese": "Portuguese"
+  },
+  "hero": {
+    "name": "Lucas Ricardo",
+    "subtitle": "Front-End Developer",
+    "profileAlt": "Lucas Ricardo profile picture"
+  },
+  "home": {
+    "aboutMe": {
+      "title": "About Me",
+      "seeMore": "See More",
+      "description": "My name is Lucas Ricardo Barbosa. I hold a degree in Systems Analysis and Development and have been building my career in software development, primarily as a full-stack developer. I have experience working with technologies such as React, Node.js, TypeScript, Next.js, React Native, and many others."
+    },
+    "experiences": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "projects": {
+      "title": "Projects",
+      "seeAll": "View All"
+    },
+    "expertise": {
+      "title": "Areas of Expertise"
+    },
+    "learning": {
+      "title": "Currently Learning"
+    },
+    "buildTogether": {
+      "title": "Let’s Build Something Together",
+      "description": "If you have a project in mind or enjoyed my work, feel free to send me a message."
+    }
+  },
+  "cv": {
+    "download": "Download My Resume"
+  },
+  "aboutMe": {
+    "pageTitle": "About Me",
+    "intro1": "My name is Lucas, I hold a degree in Systems Analysis and Development, and I am 22 years old.",
+    "intro2": "I am a Front-End Developer with around 2 years of experience working with technologies such as HTML, CSS, JavaScript, TypeScript, Tailwind CSS, ReactJS, Next.js, Git, GitHub, and much more.",
+    "intro3": "Throughout my journey as a front-end and full-stack developer, I have gained experience working with agile methodologies such as Scrum and Kanban. I am ready to contribute my expertise in JavaScript, TypeScript, React, Next.js, and Node.js to your team.",
+    "intro4": "I am driven by challenges and constantly looking for new ways to improve my skills and expand my knowledge.",
+    "personalSummary": "Personal & Professional Summary",
+    "academicBackground": "Academic Background",
+    "projectCaption": "SAPEX Project Presentation",
+    "academicDescription": "I graduated in Systems Analysis and Development, where I had the opportunity to learn everything from programming fundamentals to building complete applications. It was a period of growth and experimentation, where I worked on practical projects and strengthened my passion for creating technology solutions that truly make an impact.",
+    "personalInterests": "Personal Interests",
+    "personalInterestsDescription": "Outside of work, I have a strong passion for music, which is part of my daily life and often inspires me during programming sessions. I also enjoy football and video games, which I see as great ways to relax while keeping my mind active. These activities help balance my routine by bringing moments of creativity and enjoyment.",
+    "contactMe": "Get in Touch",
+    "contactDescription": "Outside of work, I have a strong passion for music, which is part of my daily life and often inspires me during programming sessions. I also enjoy football and video games, which I see as great ways to relax while keeping my mind active. These activities help balance my routine by bringing moments of creativity and enjoyment."
+  },
+  "stacks": {
+    "pageTitle": "My Technologies",
+    "description": "This page showcases the main technologies I have been learning and using.",
+    "searchPlaceholder": "Search",
+    "categories": {
+      "frontend": "Frontend",
+      "tests": "Testing",
+      "design": "Design",
+      "backend": "Backend",
+      "documentation": "Documentation",
+      "database": "Database",
+      "infrastructure": "Infrastructure",
+      "versioning": "Version Control",
+      "extensions": "Extensions & Plugins"
+    }
+  },
+  "setup": {
+    "pageTitle": "Setup",
+    "description": "This is a list of the equipment and tools I use in my daily workflow. It also includes products and gear that I personally recommend. As I continue upgrading my setup, I’ll keep this list updated as well.",
+    "searchPlaceholder": "Search"
+  },
+  "expertise": {
+    "frontEnd": {
+      "title": "Front-End Development",
+      "subtitle": "Next.js, TypeScript, React, and more",
+      "alt": "Computer link icon"
+    },
+    "fullStack": {
+      "title": "Full-Stack Development",
+      "subtitle": "Next.js, NestJS, Prisma, and more",
+      "alt": "Layout icon"
+    },
+    "uxui": {
+      "title": "UX/UI Designer",
+      "subtitle": "Figma & Photoshop",
+      "alt": "Chess icon"
+    }
+  },
+  "learning": {
+    "performance": {
+      "title": "Performance Optimization",
+      "subtitle": "React",
+      "alt": "React logo"
+    },
+    "cloud": {
+      "title": "Cloud Deployment",
+      "subtitle": "Google Cloud",
+      "alt": "Google logo"
+    },
+    "websocket": {
+      "title": "WebSockets",
+      "subtitle": "NestJS / Node.js",
+      "alt": "Socket.io logo"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "pageTitle": "My Projects",
+    "visit": "Visit",
+    "sourceCode": "Source Code"
+  }
+}

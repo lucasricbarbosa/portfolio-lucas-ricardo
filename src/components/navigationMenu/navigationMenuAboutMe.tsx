@@ -1,61 +1,54 @@
 import { BookOpenText, FolderGit2, LaptopMinimal, Layers } from 'lucide-react';
-import { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 
-import { Button } from '../ui/button';
-import { NavigationMenuContext } from './context/navigationMenuContext';
 import { NavigationMenuCategorieTitle } from './navigationMenuCategorieTitle';
 import { NavigationMenuLink } from './navigationMenuLink';
 
 interface NavigationMenuAboutMeProps {
-  onLinkClick: () => void; // Tipagem correta para a função
+  onLinkClick: () => void;
 }
 
 export function NavigationMenuAboutMe({
   onLinkClick,
 }: NavigationMenuAboutMeProps) {
-  const { setSelectedMenu } = useContext(NavigationMenuContext);
-
-  const handleLinkClick = (title: string) => {
-    setSelectedMenu(title);
-    onLinkClick(); // Manter a lógica de abertura/fechamento da sidebar
-  };
+  const { lang } = useParams<{ lang: string }>();
+  const { t } = useTranslation();
 
   return (
     <li className="flex flex-col gap-1">
-      <NavigationMenuCategorieTitle navigationMenuTitle="Quem sou eu" />
-      <Button
-        disabled
-        className={`group flex items-center justify-between rounded bg-transparent px-4 py-2 text-foreground transition-all duration-300 hover:bg-muted`}
-      >
-        <div className="flex items-center gap-2">
-          <FolderGit2 className="size-4 transition-all duration-300 group-hover:text-primary" />
-          <p className="text-sm font-medium">Projetos</p>
-        </div>
-        <p className="text-xs">(Em breve)</p>
-      </Button>
+      <NavigationMenuCategorieTitle navigationMenuTitle={t('nav.whoAmI')} />
       <NavigationMenuLink
-        to="/pt-BR/sobre-mim"
-        navigationTitle="Sobre mim"
+        to={`/${lang}/projects`}
+        navigationTitle={t('nav.projects')}
+        navigationIcon={
+          <FolderGit2 className="size-4 transition-all duration-300 group-hover:text-primary" />
+        }
+        onClick={onLinkClick}
+      />
+      <NavigationMenuLink
+        to={`/${lang}/about-me`}
+        navigationTitle={t('nav.aboutMe')}
         navigationIcon={
           <BookOpenText className="size-4 transition-all duration-300 group-hover:text-primary" />
         }
-        onClick={() => handleLinkClick('Sobre mim')}
+        onClick={onLinkClick}
       />
       <NavigationMenuLink
-        to="/pt-BR/tecnologias"
-        navigationTitle="Tecnologias"
+        to={`/${lang}/stacks`}
+        navigationTitle={t('nav.technologies')}
         navigationIcon={
           <Layers className="size-4 transition-all duration-300 group-hover:text-primary" />
         }
-        onClick={() => handleLinkClick('Tecnologias')}
+        onClick={onLinkClick}
       />
       <NavigationMenuLink
-        to="/pt-BR/meu-setup"
-        navigationTitle="Setup"
+        to={`/${lang}/setup`}
+        navigationTitle={t('nav.setup')}
         navigationIcon={
           <LaptopMinimal className="size-4 transition-all duration-300 group-hover:text-primary" />
         }
-        onClick={() => handleLinkClick('Setup')}
+        onClick={onLinkClick}
       />
     </li>
   );

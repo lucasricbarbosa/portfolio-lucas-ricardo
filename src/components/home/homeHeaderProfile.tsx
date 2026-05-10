@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { homeHeaderBadges } from '@/utils/homeHeaderBadges';
 
@@ -10,72 +11,54 @@ interface HomeHeaderProfileProps {
 }
 
 export function HomeHeaderProfile() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <section className="flex items-center gap-5">
         <motion.img
-          initial={{
-            opacity: 0,
-            x: -40,
-          }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: {
-              duration: 0.8,
-            },
+            transition: { duration: 0.8 },
           }}
           viewport={{ once: true }}
           className="size-24"
           src={profilePicture}
-          alt="Foto de perfil do Lucas Ricardo"
+          alt={t('hero.profileAlt')}
         />
         <div className="">
           <motion.span
-            initial={{
-              opacity: 0,
-              y: -40,
-            }}
+            initial={{ opacity: 0, y: -40 }}
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: {
-                duration: 0.6,
-              },
+              transition: { duration: 0.6 },
             }}
             viewport={{ once: true }}
             className="block text-2xl font-semibold text-foreground sm:text-3xl"
           >
-            Lucas Ricardo
+            {t('hero.name')}
           </motion.span>
           <motion.p
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: {
-                duration: 0.6,
-              },
+              transition: { duration: 0.6 },
             }}
             viewport={{ once: true }}
             className="text-sm text-muted-foreground sm:text-base"
           >
-            Desenvolvedor Front-End
+            {t('hero.subtitle')}
           </motion.p>
           <motion.div
-            initial={{
-              opacity: 0,
-              x: -40,
-            }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: {
-                duration: 0.6,
-              },
+              transition: { duration: 0.6 },
             }}
             viewport={{ once: true }}
             className="hidden flex-wrap items-center gap-1 pt-2 min-[420px]:flex"
@@ -83,17 +66,11 @@ export function HomeHeaderProfile() {
             {homeHeaderBadges.map((badge: HomeHeaderProfileProps, index) => {
               return (
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    x: -40,
-                  }}
+                  initial={{ opacity: 0, x: -40 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
-                    transition: {
-                      duration: 1,
-                      delay: 0.1 * index,
-                    },
+                    transition: { duration: 1, delay: 0.1 * index },
                   }}
                   viewport={{ once: true }}
                   key={(badge.badge, index)}

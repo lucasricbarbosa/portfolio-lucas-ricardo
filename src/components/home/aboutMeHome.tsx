@@ -1,28 +1,27 @@
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Link, useParams } from 'react-router-dom';
 
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 export function AboutMeHome() {
+  const { t } = useTranslation();
+  const { lang } = useParams<{ lang: string }>();
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Sobre mim</CardTitle>
+        <CardTitle>{t('home.aboutMe.title')}</CardTitle>
         <Link
           className="flex items-center text-xs font-medium text-primary"
-          to={'/pt-BR/sobre-mim'}
+          to={`/${lang}/about-me`}
         >
-          Ver mais <ChevronRight className="ml-1 size-3" />
+          {t('home.aboutMe.seeMore')} <ChevronRight className="ml-1 size-3" />
         </Link>
       </CardHeader>
       <CardContent>
         <span className="text-muted-foreground">
-          Meu nome é Lucas Ricardo Barbosa, sou formado em Análise e
-          Desenvolvimento de Sistemas e tenho construído minha carreira na área
-          de desenvolvimento de software, atuando principalmente como
-          desenvolvedor full-stack. Com experiência em diversas tecnologias,
-          tais como React, Node, Typescript, Next.js, React Native, entre
-          outras.
+          {t('home.aboutMe.description')}
         </span>
       </CardContent>
     </Card>

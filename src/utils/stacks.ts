@@ -5,13 +5,22 @@ export interface StacksProps {
 }
 
 export interface CategoryProps {
-  title: string;
+  titleKey:
+    | 'stacks.categories.frontend'
+    | 'stacks.categories.tests'
+    | 'stacks.categories.design'
+    | 'stacks.categories.backend'
+    | 'stacks.categories.documentation'
+    | 'stacks.categories.database'
+    | 'stacks.categories.infrastructure'
+    | 'stacks.categories.versioning'
+    | 'stacks.categories.extensions';
   items: StacksProps[];
 }
 
 const stacksList: CategoryProps[] = [
   {
-    title: 'Frontend',
+    titleKey: 'stacks.categories.frontend',
     items: [
       {
         name: 'React',
@@ -116,7 +125,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Testes',
+    titleKey: 'stacks.categories.tests',
     items: [
       {
         name: 'Cypress',
@@ -137,7 +146,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Design',
+    titleKey: 'stacks.categories.design',
     items: [
       {
         name: 'Adobe Photoshop',
@@ -166,7 +175,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Backend',
+    titleKey: 'stacks.categories.backend',
     items: [
       {
         name: 'Node.js',
@@ -221,7 +230,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Documentação',
+    titleKey: 'stacks.categories.documentation',
     items: [
       {
         name: 'Swagger',
@@ -242,7 +251,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Banco de dados',
+    titleKey: 'stacks.categories.database',
     items: [
       {
         name: 'MySQL',
@@ -264,7 +273,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Infraestrutura',
+    titleKey: 'stacks.categories.infrastructure',
     items: [
       {
         name: 'Docker',
@@ -299,7 +308,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Versionamento',
+    titleKey: 'stacks.categories.versioning',
     items: [
       {
         name: 'Git',
@@ -321,7 +330,7 @@ const stacksList: CategoryProps[] = [
     ],
   },
   {
-    title: 'Extensões e plugins',
+    titleKey: 'stacks.categories.extensions',
     items: [
       {
         name: 'Dark Reader',

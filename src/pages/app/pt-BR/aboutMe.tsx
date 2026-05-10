@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -14,21 +15,18 @@ import { Button } from '@/components/ui/button';
 import { listItems } from '@/utils/aboutMeListItens';
 
 export function AboutMe() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <Helmet title="Sobre mim" />
-      <PageTitle text="Sobre mim" />
+      <Helmet title={t('aboutMe.pageTitle')} />
+      <PageTitle text={t('aboutMe.pageTitle')} />
       <motion.section
-        initial={{
-          opacity: 0,
-          x: -40,
-        }}
+        initial={{ opacity: 0, x: -40 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: {
-            duration: 0.5,
-          },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
         className="grid grid-cols-1 gap-5 lg:grid-cols-[3fr_6fr] lg:gap-8"
@@ -40,41 +38,30 @@ export function AboutMe() {
         />
         <section className="flex flex-col gap-5">
           <span className="text-base text-muted-foreground">
-            Meu nome é Lucas, sou formado em ADS e tenho 22 anos.
+            {t('aboutMe.intro1')}
           </span>
           <span className="text-base text-muted-foreground">
-            Sou um programador Front-end com em média 2 anos de experiência com
-            essas tecnologias: HTML, CSS, JavaScript, TypeScript, Tailwind CSS,
-            ReactJS, Next.js, Tailwind CSS, Git e GitHub e muito mais...
+            {t('aboutMe.intro2')}
           </span>
           <span className="text-base text-muted-foreground">
-            Ao longo da minha trajetória como programador e engenheiro
-            full-stack e front-end, adquiri experiência em metodologias ágeis
-            como Scrum e Kanban. Estou disponível para contribuir com minha
-            expertise em JS, TS, React, Next.js e Node.js para a sua equipe.
+            {t('aboutMe.intro3')}
           </span>
           <span className="text-base text-muted-foreground">
-            Sou movido por desafios e sempre busco novas formas de melhorar
-            minhas habilidades e expandir meu conhecimento.
+            {t('aboutMe.intro4')}
           </span>
         </section>
       </motion.section>
       <motion.div
-        initial={{
-          opacity: 0,
-          x: -40,
-        }}
+        initial={{ opacity: 0, x: -40 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: {
-            duration: 0.5,
-          },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
         className="mt-10"
       >
-        <SectionTitle text="Resumo pessoal e profissional" />
+        <SectionTitle text={t('aboutMe.personalSummary')} />
         <ul className="flex list-disc flex-col gap-5 pl-5 first:pt-6">
           {listItems.map((item, index) => (
             <ListItem
@@ -87,21 +74,16 @@ export function AboutMe() {
         </ul>
       </motion.div>
       <motion.div
-        initial={{
-          opacity: 0,
-          x: -40,
-        }}
+        initial={{ opacity: 0, x: -40 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: {
-            duration: 0.5,
-          },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
         className="mt-10"
       >
-        <SectionTitle text="Formação acadêmica" />
+        <SectionTitle text={t('aboutMe.academicBackground')} />
         <img
           className="aspect-video rounded object-cover"
           loading="lazy"
@@ -109,41 +91,22 @@ export function AboutMe() {
           alt=""
         />
         <p className="w-full pt-2 text-end text-sm italic text-muted-foreground">
-          Apresentação projeto SAPEX
+          {t('aboutMe.projectCaption')}
         </p>
-        <span className="block pt-6">
-          Sou formado em Análise e Desenvolvimento de Sistemas, onde tive a
-          oportunidade de aprender desde a lógica de programação até o
-          desenvolvimento de aplicações completas. Foi um período em que pude
-          experimentar bastante, colocar a mão na massa em projetos práticos e
-          despertar ainda mais meu interesse por criar soluções tecnológicas que
-          realmente fazem a diferença.
-        </span>
+        <span className="block pt-6">{t('aboutMe.academicDescription')}</span>
       </motion.div>
       <motion.div
-        initial={{
-          opacity: 0,
-          x: -40,
-        }}
+        initial={{ opacity: 0, x: -40 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: {
-            duration: 0.5,
-          },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: true }}
         className="mt-10"
       >
-        <SectionTitle text="Interesses pessoais" />
-        <span>
-          Fora do âmbito profissional, tenho uma grande paixão por música, que
-          me acompanha no dia a dia e muitas vezes serve como inspiração durante
-          minhas sessões de programação. Além disso, gosto bastante de futebol e
-          videogames, que considero ótimas formas de lazer e também de manter a
-          mente ativa. Essas atividades equilibram minha rotina, trazendo
-          momentos de descontração e criatividade.
-        </span>
+        <SectionTitle text={t('aboutMe.personalInterests')} />
+        <span>{t('aboutMe.personalInterestsDescription')}</span>
         <section className="grid grid-cols-1 gap-x-5 pt-6 sm:grid-cols-2">
           <SpotifyMusicPlayer musicLink="0YPuRrM2NwzdtuShUKkts6" />
           <SpotifyMusicPlayer musicLink="37Tmv4NnfQeb0ZgUC4fOJj" />
@@ -151,17 +114,10 @@ export function AboutMe() {
           <SpotifyMusicPlayer musicLink="5VBwLOZDyDWInNYIUniuZG" />
         </section>
         <section className="my-10">
-          <SectionTitle text="Entre em contato comigo" />
-          <span>
-            Fora do âmbito profissional, tenho uma grande paixão por música, que
-            me acompanha no dia a dia e muitas vezes serve como inspiração
-            durante minhas sessões de programação. Além disso, gosto bastante de
-            futebol e videogames, que considero ótimas formas de lazer e também
-            de manter a mente ativa. Essas atividades equilibram minha rotina,
-            trazendo momentos de descontração e criatividade.
-          </span>
+          <SectionTitle text={t('aboutMe.contactMe')} />
+          <span>{t('aboutMe.contactDescription')}</span>
           <nav className="grid grid-cols-1 items-center gap-4 pt-6 md:grid-cols-2 md:gap-5">
-            <Button asChild className="" variant={'outline'}>
+            <Button asChild variant={'outline'}>
               <Link
                 to={'https://www.linkedin.com/in/lucas-ricardo-barbosa/'}
                 className="flex items-center justify-center gap-3 text-sm font-medium"
@@ -172,7 +128,7 @@ export function AboutMe() {
                 LinkedIn
               </Link>
             </Button>
-            <Button asChild className="" variant={'outline'}>
+            <Button asChild variant={'outline'}>
               <a
                 href="mailto:lucasricardobarb@gmail.com"
                 className="flex items-center justify-center gap-3 text-sm font-medium"

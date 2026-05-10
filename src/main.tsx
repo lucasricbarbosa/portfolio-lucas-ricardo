@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import './i18n/index.ts';
 
-import { App } from './app.tsx'
+import { StrictMode, Suspense } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import { App } from './app.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <Suspense fallback={<div />}>
+      <App />
+    </Suspense>
   </StrictMode>,
-)
+);

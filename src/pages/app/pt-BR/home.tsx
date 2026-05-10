@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 
 import { BuildTogether } from '@/components/buildTogether';
@@ -8,24 +9,16 @@ import { HomeHeaderProfile } from '@/components/home/homeHeaderProfile';
 import { Projects } from '@/components/home/projects';
 
 export function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <Helmet title="Home" />
+      <Helmet title={t('nav.home')} />
       <HomeHeaderProfile />
-
-      {/* Sobre mim -=-=-=-==-==-==-==-=-=- */}
       <AboutMeHome />
-
-      {/* Experiências e Educação -=-=-=-==-==-==-==-=-=- */}
       <ExperiencesAndEducation />
-
-      {/* Projetos -=-=-=-==-==-==-==-=-=- */}
       <Projects />
-
-      {/* Áreas de expertise e Aprendendo -=-=-=-==-==-==-==-=-=- */}
       <ExpertiseAndLearning />
-
-      {/* Construir algo juntos -=-=-=-==-==-==-==-=-=- */}
       <BuildTogether />
     </>
   );
